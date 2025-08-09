@@ -8,47 +8,53 @@ const Projects = () => {
       id: 1,
       title: "Artora",
       image: artora,
-      github: "#",
-      live: "#",
+      github: "https://github.com/SwapnilSahare45/Artora",
+      live: "https://artora-kappa.vercel.app",
       description:
-        "A MERN stack web app for buying, selling, and bidding on artworks directly or via auctions. Includes theme mode support and modern UI with Tailwind CSS.",
-      tech: "MongoDB, Express.js, React.js, Node.js, Tailwind CSS",
+        "A MERN stack web app for buying, selling, and bidding on artworks in auctions. Includes theme mode support and modern UI with Tailwind CSS.",
+      tech: "MongoDB, Express.js, React.js, Node.js, Tailwind CSS, Nodemailer",
       features: [
-        "User authentication (login/register).",
-        "Artwork listing and filtering.",
-        "Auctions with bidding system.",
-        "Dark/Light mode support.",
+        "User authentication with OTP verification.",
+        "Profile management with update functionality.",
+        "Artwork listing, filtering, and updating.",
+        "Auctions with a bidding system.",
+        "Wishlist and order placement features.",
+        "Dark/Light mode support."
       ],
     },
     {
       id: 2,
       title: "Recipe Finder",
       image: recipe,
-      github: "#",
-      live: "#",
+      github: "https://github.com/SwapnilSahare45/RecipesFinder",
+      live: "https://recipes-finder-ruddy.vercel.app",
       description:
-        "A MERN stack app to add and search recipes by ingredients or category, with a responsive and minimal design.",
+        "A MERN stack weeb app to add and search recipes by ingredients or category, with a responsive and minimal design.",
       tech: "MongoDB, Express.js, React.js, Node.js, Tailwind CSS",
       features: [
+        "User authentication with JWT.",
+        "Profile management with personal recipes.",
         "Add new recipes with ingredients, instructions, and images.",
-        "Search recipes by name or ingredient.",
-        "Responsive design for mobile and desktop.",
+        "Search and find recipes by name.",
       ],
     },
     {
       id: 3,
       title: "Portfolio Website",
       image: portfolio,
-      github: "#",
+      github: "https://github.com/SwapnilSahare45/Portfolio",
       live: "#",
       description:
         "A personal portfolio website showcasing projects, skills, and contact information. Built with React and Tailwind CSS for a modern and responsive UI.",
       tech: "React.js, Tailwind CSS, JavaScript",
       features: [
         "Responsive design across all devices.",
-        "Smooth scrolling and animations.",
-        "Dark/Light mode support.",
+        "Smooth scrolling and interactive animations.",
+        "Project showcase with live links and GitHub repositories.",
+        "Contact section with form and direct contact details.",
+        "Social media integration for quick connections."
       ],
+
     },
   ];
 
@@ -70,11 +76,11 @@ const Projects = () => {
             />
 
             <div className="font-gruppo flex flex-col flex-1">
-              <h2 className="uppercase text-xl font-orbitron tracking-wider text-amber-300 mb-2">
+              <h2 className="uppercase text-xl font-orbitron tracking-wider text-amber-300 mb-1">
                 {project.title}
               </h2>
 
-              <div className="mb-2">
+              <div className="mb-1">
                 <a
                   href={project.github}
                   className="text-blue-500 underline-offset-4 decoration-0 hover:underline"
@@ -94,14 +100,14 @@ const Projects = () => {
                 </a>
               </div>
 
-              <p className="mb-2">{project.description}</p>
+              <p className="mb-1">{project.description}</p>
 
               <p>
                 <strong className="tracking-widest">Tech Stack:</strong>{" "}
                 {project.tech}
               </p>
 
-              <div className="mt-2">
+              <div className="mt-1">
                 <strong className="tracking-widest">Features:</strong>
                 <ul className="list-disc pl-5">
                   {project.features.map((feature, index) => (
