@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Gruppo&family=Notable&family=Orbitron:wght@400..900&display=swap');
+@import "tailwindcss";
+
+html{
+    scroll-behavior: smooth;
+}
+
+#root {
+    background-color: #222;
+    color: white;
+}
+
+@theme {
+    --font-orbitron: "Orbitron", sans-serif;
+    --font-gruppo: "Gruppo", sans-serif;
+    --font-notable: "Notable", sans-serif;
+}
