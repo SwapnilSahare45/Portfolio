@@ -43,7 +43,7 @@ const Projects = () => {
       title: "Portfolio Website",
       image: portfolio,
       github: "https://github.com/SwapnilSahare45/Portfolio",
-      live: "#",
+      live: "https://portfolio-rho-wine-63.vercel.app",
       description:
         "A personal portfolio website showcasing projects, skills, and contact information. Built with React and Tailwind CSS for a modern and responsive UI.",
       tech: "React.js, Tailwind CSS, JavaScript",
