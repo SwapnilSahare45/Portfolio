@@ -39,7 +39,7 @@ const Home = () => {
             {/* Image */}
             <div className='relative z-2 w-56 h-56 md:w-64 md:h-64 lg:w-80 lg:h-80'>
                 <div className='absolute inset-0 border-r-2 border-l-2 border-amber-500 rounded-full animate-spin'></div>
-                <img src={MyPic} alt="My Profile" className='rounded-full p-2' />
+                <img src={MyPic} alt="My Profile" loading='lazy' className='rounded-full p-2' />
             </div>
 
             {/* My Info */}
