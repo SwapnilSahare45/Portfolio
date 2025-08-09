@@ -9,7 +9,7 @@ const Contact = () => {
 
             <div className="z-2 grid grid-cols-1 w-full gap-4 md:grid-cols-2 md:px-12 lg:px-20">
                 <form
-                    className="bg-[#333] flex flex-col gap-4 rounded-lg p-8 font-gruppo shadow-md shadow-amber-300 hover:shadow-lg hover:scale-105 transition-all duration-300"
+                    className="bg-[#333] flex flex-col gap-4 rounded-lg p-8 font-gruppo shadow-md shadow-amber-300 hover:shadow-lg hover:scale-102 transition-all duration-300"
                 >
                     <p className="text-gray-300">Let’s talk — fill out the form and I’ll get back to you.</p>
                     <input
@@ -36,7 +36,7 @@ const Contact = () => {
                     </button>
                 </form>
 
-                <div className="bg-[#333] flex flex-col gap-4 px-4 py-8 font-gruppo rounded-lg shadow-md shadow-amber-300 md:px-8 justify-self-center-safe self-center hover:shadow-lg hover:scale-105 transition-all duration-300">
+                <div className="bg-[#333] flex flex-col gap-4 px-4 py-8 font-gruppo rounded-lg shadow-md shadow-amber-300 md:px-8 justify-self-center-safe self-center hover:shadow-lg hover:scale-102 transition-all duration-300">
                     <p className="text-gray-300">Call, email, or find me on social — your choice!</p>
                     <div className="flex flex-col gap-4">
                         <p className="flex items-center gap-2">
@@ -57,10 +57,10 @@ const Contact = () => {
                         <p className="text-gray-300">Find me on:</p>
                         <div className="flex gap-4 mt-2">
                             <a href="" target="_blank" rel="noopener noreferrer">
-                                <FaLinkedin className="text-3xl text-amber-300" />
+                                <FaLinkedin className="text-3xl text-blue-500" />
                             </a>
                             <a href="" target="_blank" rel="noopener noreferrer">
-                                <FaGithub className="text-3xl text-amber-300" />
+                                <FaGithub className="text-3xl text-white" />
                             </a>
                         </div>
                     </div>

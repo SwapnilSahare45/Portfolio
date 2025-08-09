@@ -52,7 +52,14 @@ const Home = () => {
                         <span className='animate-ping'>|</span>
                     </span>
                 </p>
-                <button className='bg-amber-300 font-orbitron uppercase tracking-widest px-4 py-2 rounded shadow-lg shadow-amber-300 text-black hover:-rotate-6 transition-all duration-300'>Resume</button>
+                <a
+                    href="/Resume.pdf"
+                    download
+                    className="inline-block transform transition-transform duration-300 hover:-rotate-6 bg-amber-300 font-orbitron uppercase tracking-widest px-4 py-2 rounded shadow-lg shadow-amber-300 text-black"
+                >
+                    Resume
+                </a>
+
             </div>
 
         </section>
