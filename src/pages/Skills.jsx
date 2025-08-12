@@ -93,9 +93,8 @@ const Skills = () => {
           <div
             key={index}
             ref={(el) => (cardRefs.current[index] = el)}
-            className={`bg-[#333] flex flex-col gap-2 items-center justify-center rounded-lg p-6 shadow-md shadow-amber-300 hover:shadow-lg hover:scale-105 transition-all duration-300 ease-out
-              ${visible[index] ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
-            style={{ transitionDelay: `${index * 100}ms` }}
+            className={`bg-[#333] flex flex-col gap-2 items-center justify-center rounded-lg p-6 shadow-md shadow-amber-300 transition-all duration-700 ease-out hover:shadow-lg hover:scale-105  
+              ${visible[index] ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10 md:translate-x-20 lg:translate-x-40"}`}
           >
             <div>{skill.icon}</div>
             <h1 className="text-xl font-gruppo tracking-widest text-amber-300 text-center md:text-2xl">
@@ -105,7 +104,7 @@ const Skills = () => {
           </div>
         ))}
       </div>
-    </div>
+    </div >
   );
 };
 
