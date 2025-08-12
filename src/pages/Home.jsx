@@ -3,7 +3,13 @@ import MyPic from '../assets/MyPic.png';
 
 const Home = () => {
 
-    const roles = ["Web Developer", "Frontend Developer", "Backend Developer", "MERN Stack Developer", "React Developer", "JavaScript Enthusiast", "Full Stack Developer"];
+    const roles = [
+        "Full Stack Developer",
+        "MERN Stack Developer",
+        "Frontend Developer",
+        "Backend Developer",
+        "React Developer"
+    ]
 
     const [index, setIndex] = useState(0);
     const [role, setRole] = useState("");
@@ -69,8 +75,8 @@ const Home = () => {
 
             {/* My Info */}
             <div
-            ref={elementRef}
-            className={`z-2 transition-all duration-700 ease-out ${inView ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-40"}`}>
+                ref={elementRef}
+                className={`z-2 transition-all duration-700 ease-out ${inView ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-40"}`}>
                 <p className='text-xl font-gruppo md:text-2xl md:tracking-wide lg:text-3xl'>Hello, I'm</p>
                 <h1 className='font-notable tracking-widest text-2xl md:text-4xl md:mb-2 lg:text-6xl'>Swapnil sahare</h1>
                 <p className='text-xl font-gruppo mb-4 md:tracking-wide md:text-2xl lg:text-3xl'>A passionate{" "}
