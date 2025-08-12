@@ -2,7 +2,7 @@ import { FaLinkedin, FaGithubSquare } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#333] text-white py-2 px-12 flex items-center justify-between">
+    <footer className="bg-[#333] text-white py-2 px-12 flex flex-col-reverse gap-2 items-center justify-between md:flex-row">
       <p className="text-sm md:text-base font-orbitron tracking-widest">
         Design and Developed by ❤️ <span className="font-semibold">Swapnil Sahare</span>
       </p>
