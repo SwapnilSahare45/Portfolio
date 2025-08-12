@@ -52,7 +52,7 @@ const Projects = () => {
         "Responsive design across all devices.",
         "Smooth scrolling and interactive animations.",
         "Project showcase with live links and GitHub repositories.",
-        "Contact section with form and direct contact details.",
+        "Contact section with form.",
         "Social media integration for quick connections.",
       ],
     },
