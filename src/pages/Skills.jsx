@@ -15,6 +15,7 @@ import {
   SiMysql,
 } from "react-icons/si";
 import { VscVscode } from "react-icons/vsc";
+import { useEffect, useRef, useState } from "react";
 
 const Skills = () => {
   const skills = [
@@ -33,22 +34,77 @@ const Skills = () => {
     { name: "VS Code", icon: <VscVscode className="text-blue-400 text-4xl" />, level: 90 },
   ];
 
+  const headingRef = useRef(null);
+  const cardRefs = useRef([]);
+  const [headingVisible, setHeadingVisible] = useState(false);
+  const [visible, setVisible] = useState(() => skills.map(() => false));
+
+  // Heading observer
+  useEffect(() => {
+    const obs = new IntersectionObserver(
+      ([entry]) => setHeadingVisible(entry.isIntersecting),
+      { threshold: 0.2 }
+    );
+    if (headingRef.current) obs.observe(headingRef.current);
+    return () => {
+      if (headingRef.current) obs.unobserve(headingRef.current);
+    };
+  }, []);
+
+  // Card observer
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        setVisible((prev) => {
+          const next = [...prev];
+          entries.forEach((entry) => {
+            const idx = cardRefs.current.findIndex((el) => el === entry.target);
+            if (idx !== -1) next[idx] = entry.isIntersecting;
+          });
+          return next;
+        });
+      },
+      { threshold: 0.2 }
+    );
+
+    cardRefs.current.forEach((el) => {
+      if (el) observer.observe(el);
+    });
+
+    return () => {
+      cardRefs.current.forEach((el) => {
+        if (el) observer.unobserve(el);
+      });
+    };
+  }, [skills.length]);
+
   return (
-    <div id="skills" className="min-h-screen flex flex-col items-center px-4 py-8">
-      <h1 className="font-orbitron uppercase tracking-wider text-4xl font-semibold md:text-6xl mb-8 z-2">Skills</h1>
+    <div id="skills" className="min-h-screen flex flex-col items-center px-4 py-8 overflow-hidden">
+      <h1
+        ref={headingRef}
+        className={`font-orbitron uppercase tracking-wider text-4xl font-semibold md:text-6xl mb-8 z-2 transition-all duration-700 ease-out
+          ${headingVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-40"}`}
+      >
+        Skills
+      </h1>
 
       <div className="z-2 grid grid-cols-2 gap-4 md:px-12 md:grid-cols-3 md:gap-8 lg:px-18 lg:grid-cols-5">
-        {
-          skills.map((skill, index) => (
-            <div key={index} className="bg-[#333] flex flex-col gap-2 items-center justify-center rounded-lg p-6 shadow-md shadow-amber-300 hover:shadow-lg hover:scale-105 transition-all duration-300">
-              <div>{skill.icon}</div>
-              <h1 className="text-xl font-gruppo tracking-widest text-amber-300 text-center md:text-2xl">{skill.name}</h1>
-              <span className="font-orbitron tracking-widest text-amber-300">{skill.level}%</span>
-            </div>
-          ))
-        }
+        {skills.map((skill, index) => (
+          <div
+            key={index}
+            ref={(el) => (cardRefs.current[index] = el)}
+            className={`bg-[#333] flex flex-col gap-2 items-center justify-center rounded-lg p-6 shadow-md shadow-amber-300 hover:shadow-lg hover:scale-105 transition-all duration-300 ease-out
+              ${visible[index] ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+            style={{ transitionDelay: `${index * 100}ms` }}
+          >
+            <div>{skill.icon}</div>
+            <h1 className="text-xl font-gruppo tracking-widest text-amber-300 text-center md:text-2xl">
+              {skill.name}
+            </h1>
+            <span className="font-orbitron tracking-widest text-amber-300">{skill.level}%</span>
+          </div>
+        ))}
       </div>
-
     </div>
   );
 };
