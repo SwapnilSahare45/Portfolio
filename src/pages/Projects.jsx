@@ -15,7 +15,8 @@ const Projects = () => {
         "A MERN stack web app for buying, selling, and bidding on artworks in auctions. Includes theme mode support and modern UI with Tailwind CSS.",
       tech: "MongoDB, Express.js, React.js, Node.js, Tailwind CSS, Nodemailer",
       features: [
-        "User authentication with OTP verification.",
+        "Role based user authentication with OTP verification.",
+        "Admin dashboard for managing users, artworks, and auctions.",
         "Profile management with update functionality.",
         "Artwork listing, filtering, and updating.",
         "Auctions with a bidding system.",
@@ -25,7 +26,7 @@ const Projects = () => {
     },
     {
       id: 2,
-      title: "Recipe Finder",
+      title: "CookBook",
       image: recipe,
       github: "https://github.com/SwapnilSahare45/RecipesFinder",
       live: "https://recipes-finder-ruddy.vercel.app",
@@ -36,7 +37,7 @@ const Projects = () => {
         "User authentication with JWT.",
         "Profile management with personal recipes.",
         "Add new recipes with ingredients, instructions, and images.",
-        "Search and find recipes by name.",
+        "Search and find recipes by name and category.",
       ],
     },
     {
