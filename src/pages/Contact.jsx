@@ -54,7 +54,7 @@ const Contact = () => {
             id="contact"
             className="min-h-screen flex flex-col items-center justify-center px-4 py-8 overflow-hidden"
         >
-            <h1
+            <h2
                 ref={elementRef}
                 className={`font-orbitron uppercase tracking-wider text-4xl text-center font-semibold md:text-6xl mb-8 z-2 transition-all duration-700 ease-out ${
                     inView
@@ -63,7 +63,7 @@ const Contact = () => {
                 }`}
             >
                 Contact Me
-            </h1>
+            </h2>
 
             <form
                 onSubmit={handleSubmit}

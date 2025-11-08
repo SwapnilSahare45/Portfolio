@@ -104,13 +104,13 @@ const Projects = () => {
 
   return (
     <div id="projects" className="min-h-screen flex flex-col items-center gap-4 px-4 py-6 overflow-hidden">
-      <h1
+      <h2
         ref={headingRef}
         className={`font-orbitron uppercase tracking-wider text-4xl font-semibold md:text-6xl z-2 transition-all duration-700 ease-out
           ${headingVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-40"}`}
       >
         Projects
-      </h1>
+      </h2>
 
       <div className="grid grid-cols-1 md:grid-cols-2 md:px-12 lg:px-16 lg:grid-cols-3 gap-6 w-full">
         {projects.map((project, idx) => (

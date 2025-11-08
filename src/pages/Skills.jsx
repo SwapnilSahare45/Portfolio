@@ -80,13 +80,13 @@ const Skills = () => {
 
   return (
     <div id="skills" className="min-h-screen flex flex-col items-center px-4 py-8 overflow-hidden">
-      <h1
+      <h2
         ref={headingRef}
         className={`font-orbitron uppercase tracking-wider text-4xl font-semibold md:text-6xl mb-8 z-2 transition-all duration-700 ease-out
           ${headingVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-40"}`}
       >
         Skills
-      </h1>
+      </h2>
 
       <div className="z-2 grid grid-cols-2 gap-4 md:px-12 md:grid-cols-3 md:gap-8 lg:px-18 lg:grid-cols-5">
         {skills.map((skill, index) => (

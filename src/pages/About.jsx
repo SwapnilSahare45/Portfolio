@@ -26,9 +26,9 @@ const About = () => {
     return (
         <div id="about" className="min-h-screen flex flex-col items-center justify-center gap-4 overflow-hidden">
 
-            <h1
+            <h2
                 ref={elementRef}
-                className={`font-orbitron uppercase tracking-wider text-4xl font-semibold md:text-6xl z-2 transition-all duration-700 ease-out ${inView ? "opacity-100 translate-x-0" : "opacity-0 translate-x-40"}`}>About me</h1>
+                className={`font-orbitron uppercase tracking-wider text-4xl font-semibold md:text-6xl z-2 transition-all duration-700 ease-out ${inView ? "opacity-100 translate-x-0" : "opacity-0 translate-x-40"}`}>About me</h2>
 
             <p
                 ref={elementRef}
